@@ -109,4 +109,14 @@ crontab -e
 
 rpm安装
 rpm -qa 查看所有安装包
-rpm -e（卸载） --nodeps 强制卸载
+rpm -e（卸载） --nodeps   安装包  强制卸载
+rpm  -qa | grep jdk | xargs rpm -e --nodeps
+rpm -ivh
+    -i 安装
+    -v 详细信息
+    -h 进度条
+    --nodeps 强制 不检查依赖
+
+yum安装
+yum list
+yum -y  install 安装名称 一直确定

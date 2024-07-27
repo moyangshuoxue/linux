@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bff357b2-0bb2-4b9d-8e7d-a73710a76d16" name="Changes" comment="linux目录笔记提交">
+    <list default="true" id="bff357b2-0bb2-4b9d-8e7d-a73710a76d16" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/笔记/linux.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/linux.txt" afterDir="false" />
     </list>
@@ -84,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1722067474029</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="linux目录笔记第二次提交">
+      <created>1722081355420</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722081355420</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +129,7 @@
     <MESSAGE value="第一次测试提交" />
     <MESSAGE value="第一次测试笔记提交" />
     <MESSAGE value="linux目录笔记提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="linux目录笔记提交" />
+    <MESSAGE value="linux目录笔记第二次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="linux目录笔记第二次提交" />
   </component>
 </project>
