@@ -1,3 +1,4 @@
+linux目录结构
 bin:命令执行文件
 boot:系统引导文件
 dev:计算机内部硬件 cpu 内存
@@ -16,3 +17,96 @@ sys 系统更新之后 计算机 硬件 产生文件
 tmp 临时文件 定期删除
 usr 用户设置的文件
 var 额外产生日志文件
+
+开关机命令介绍
+sync 内存刷回硬盘
+shutdown  关机
+reboot 关机重启  shutdown -r  30  （分钟）
+poweroff 关机   shutdown -h   30
+
+
+centos系统管理服务
+systemctl  stop start   enable disable
+
+ls查看
+-a 隐藏
+-l 列表展示
+
+mkdir命令
+-p 多级创建
+
+cp 命令  cp from to
+-r 递归
+
+rm命令
+-f 强制不用确定
+-r 递归删除
+
+历史遗留查看 命令
+cat
+more  空格一页 回车一行 ctrl+F 下一屏  ctrl+B 上一屏
+less                  pgup         pgdn
+
+使用查看命令 head tail
+head -n 数字  文件
+tail -n 数字 文件
+tail -f 文件
+
+echo命令
+-e 解析 “”中的转移字符
+/t  /n
+"///t" -> /t
+
+ln软连接
+-s  创建软链接
+ln -s  from  to
+
+history命令 查看以前执行的命令
+
+vim命令
+一般模式： u 返回  gg 回到开头 shift+g 回到结尾  dd 删除 d数字d 删除几行  yy 复制  n查找下一个 shift+n查找上一个  p粘贴
+编辑模式： 输入一些内容
+命令模式： set nu    set nonu   查找关键字  ？java
+
+权限命令
+chmod 777 文件
+chgrg  目标组 文件
+chown  目标人 文件
+    -R 递归
+
+find命令
+find  目录或者文件 -name "*.*" -user "*.*"  -size +1024k  +1G
+
+grep命令
+-n  java 路径包含java筛选
+grep 再来一个 | grep -v grep 过滤自己
+压缩命令
+gzip  gunzip  不保留源文件 只能压缩文件
+zip unzip 可以linux window 通用
+zip -r 目录  文件名 unzip -d 解压文件目录
+tar -zxvf  解压文件  from目录/文件名
+tar -zcvf 压缩目录或者文件   文件名
+    -z 打包同时压缩
+    -v详细信息
+    -f指定压缩文件名字
+
+磁盘分区命令
+df -h
+fdisk -l 详细信息
+
+进程线程命令
+ps -ef 查看后台进程 及其父子进程关系  父 -》子 子 ！-》父
+ps -aux 系统中所有进程0
+    -a 所有进程
+    -e 显示所有用户的所有进程
+    -x 显示没有终端的进程
+kill -9 进程号or进程名称
+
+
+系统定时任务命令
+systemctl start crontab
+crontab -e
+
+rpm安装
+rpm -qa 查看所有安装包
+rpm -e（卸载） --nodeps 强制卸载
