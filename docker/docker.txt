@@ -1,0 +1,116 @@
+docker  pull  ngnix:lastest
+docker  images   查看所有镜像
+docker  run -d(后台) --name  myngnix ngnix:lastest
+docker  ps  -a(查看所有镜像实例 包括挂掉的)
+docker  exec  -it（交互模式）   ngnix:lastest  /bin/bash（入口）
+docker  search nginx 查看所有nginx                   （显示）office 官方
+docker  rmi   镜像id  $( )
+docker  rm    实例id
+docker  stop  实例id
+docker  start  实例id
+docker  stats  实例id  （资源占用情况）
+
+本地传送
+docker commit -m "update index.html" mynginx mynginx:v1.0  打包成镜像
+docker save -o mynginx.tar mynginx:v1.0  打包成文件
+docker load -i  mynginx.tar   mynginx:v1.0
+
+远程推送
+docker login
+docker tag mynginx:v1.0 cwh/mynginx:v1.0
+docker push leifengyang/mynginx:v1.0
+
+存储
+docker run -d -p 99:80(外部访问端口:内部使用端口) \
+-v /app/nghtml:/usr/share/nginx/html \  (挂载目录 两边都会清空)   (要开始权限 chmod 777 文件目录)
+-v ngconf:/etc/nginx \                  （放在/var/lib/docker/volumn/ngconf）
+--name app03 \
+nginx
+
+
+网络
+docker network create mynetwork
+
+docker run -d -p 6379:6379 \
+-v /app/rd1:/bitnami/redis/data \
+-e REDIS_REPLICATION_MODE=master \ （环境变量）
+-e REDIS_PASSWORD=123456 \          （环境变量）
+--network mynet --name redis01 \
+--restart always                    （开机自启动）
+bitnami/redis
+
+
+#从节点
+docker run -d -p 6380:6379 \
+-v /app/rd2:/bitnami/redis/data \
+-e REDIS_REPLICATION_MODE=slave \
+-e REDIS_MASTER_HOST=redis01 \
+-e REDIS_MASTER_PORT_NUMBER=6379 \
+-e REDIS_MASTER_PASSWORD=123456 \
+-e REDIS_PASSWORD=123456 \
+--network mynet --name redis02 \
+bitnami/redis
+
+
+compose 命令一键安装
+docker compose -f comoise.yaml -d
+
+文件格式
+name: myblog
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=wordpress
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - /app/myconf:/etc/mysql/conf.d
+    restart: always
+    networks:
+      - blog
+
+  wordpress:
+    image: wordpress
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: 123456
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wordpress:/var/www/html
+    restart: always
+    networks:
+      - blog
+    depends_on:
+      - mysql
+
+volumes:
+  mysql-data:
+  wordpress:
+
+networks:
+  blog:
+
+
+制作docker镜像
+文件名 dockerfile
+最后docker -f dockerfile -t myjava:1.0 .
+
+文件格式:
+FROM openjdk:17
+
+LABEL author=leifengyang
+
+COPY app.jar /app.jar
+
+EXPOSE 8080
+
+ENTRYPOINT ["java","-jar","/app.jar"]
+
+

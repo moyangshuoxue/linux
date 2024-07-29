@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bff357b2-0bb2-4b9d-8e7d-a73710a76d16" name="Changes" comment="">
+    <list default="true" id="bff357b2-0bb2-4b9d-8e7d-a73710a76d16" name="Changes" comment="linux目录笔记第三次提交">
+      <change afterPath="$PROJECT_DIR$/docker/docker.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/linux.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/linux.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,15 +37,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/linux&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "last_opened_file_path": "E:/linux",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,6 +56,8 @@
       <option name="presentableId" value="Default" />
       <updated>1722065240518</updated>
       <workItem from="1722065242360" duration="602000" />
+      <workItem from="1722086687619" duration="645000" />
+      <workItem from="1722251770211" duration="2481000" />
     </task>
     <task id="LOCAL-00001" summary="第一次测试提交">
       <created>1722065428328</created>
@@ -91,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1722081355420</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="linux目录笔记第三次提交">
+      <created>1722084124675</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1722084124675</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +140,7 @@
     <MESSAGE value="第一次测试笔记提交" />
     <MESSAGE value="linux目录笔记提交" />
     <MESSAGE value="linux目录笔记第二次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="linux目录笔记第二次提交" />
+    <MESSAGE value="linux目录笔记第三次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="linux目录笔记第三次提交" />
   </component>
 </project>
